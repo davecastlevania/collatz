@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Collatz Sequence!
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3>Welcome to the Collatz Sequence</h3>
+  <p>Input a number to get started!</p>
+  <form (ngSubmit)="collatzForm()">
+  <ion-input type="number" [(ngModel)]="numbers.number" [ngModelOptions]="{standalone: true}" placeholder="Please put in your number to start">
+  </ion-input>
+  <button ion-button type="submit">Submit
+  </button>
+  </form>
+
+  <p>These are the results!</p>
+  {{ numbers.number }}
+</ion-content>
